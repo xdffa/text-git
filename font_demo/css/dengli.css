@@ -1,0 +1,177 @@
+.img-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.baidu_logo {
+    width: 150px;
+    height: 50px;
+    z-index: 2;
+    opacity: 0.8;
+    padding: 50px 30px;
+
+}
+
+.content {
+    overflow: hidden
+}
+
+.wangyebiaoqian h3 {
+    font-size: 50px;
+    letter-spacing: 0;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 100px;
+    padding-left: 150px;
+    position: relative;
+    color: aliceblue;
+}
+
+.wangyebiaoqian p {
+    font-size: 35px;
+    letter-spacing: 3.81px;
+    font-weight: 300;
+    margin: 0;
+    padding: 0px 150px;
+    position: relative;
+    color: aliceblue;
+}
+
+.xiabiaoqian {
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    left: 70px;
+    bottom: 57px;
+    font-size: 14px;
+    opacity: .8;
+}
+
+.bangzhu {
+
+
+    color: #f1e9e9;
+
+}
+
+.shuxian {
+    border-right: 2px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.kefu {
+    padding-left: 20px;
+}
+
+.kefu-img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.denglu {
+    position: absolute;
+    right: 139px;
+    top: 50%;
+    margin-top: -340px;
+    width: 480px;
+    height: 680px;
+    background: rgba(255, 255, 255, .9);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dl h3 {
+    font-size: 36px;
+    color: black;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 1px;
+}
+
+.dl p {
+    font-size: 15px;
+    color: #9B9B9B;
+    margin-left: 40px;
+    margin-top: 7px;
+    margin-bottom: 30px;
+
+}
+.dl a {
+    font-size: 15px;
+    color: #3f89ec;
+}
+
+.user {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+
+}
+
+.label-username {
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0;
+    text-align: right;
+    width: 82px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    font-weight: 200;
+}
+
+.input-username {
+    font-family: Arial, "宋体";
+    padding: 11px 10px;
+    max-height: 40px;
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 321px;
+    color: 0, 0, 0.3;
+
+}
+
+.mima {
+
+    margin-left: 40px;
+
+}
+
+.zhuce-button {
+    background-color: #3f89ec;
+    width: 399px;
+    height: 50px;
+    
+    border-radius: 25px;
+}
+.yiyouzhanghao {
+    width: 350px;
+    height: 408px;
+    background-color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 48%;
+    margin:-100px 0 0 -150px
+}
+.box1{
+    background-image:url(https://passport.baidu.com/passApi/img/loginlogo.png);
+    background-repeat: no-repeat;
+    font-size: 16px;
+    height: 32px;
+    line-height: 46px;
+    padding-left: 118px;
+    margin-left: 30px;
+    
+}
+.box2{
+    
+    display: block;
+    position: relative;
+    
+}

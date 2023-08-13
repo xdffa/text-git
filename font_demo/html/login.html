@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册百度账号</title>
+    <link rel="stylesheet" href="../css/dengli.css">
+
+</head>
+
+<body class="content">
+    <div id="head"></div>
+    <div id="nav"></div>
+    <div id="content">
+        <div>
+            <img class="img-container" src="../image/beijing.jpg" alt="11111">
+        </div>
+        <div>
+            <img class="baidu_logo" src="../image/baidu.png" alt="">
+        </div>
+        <div class="wangyebiaoqian">
+            <h3>用科技</h3>
+            <p>让复杂的世界更简单</p>
+        </div>
+        <div class="xiabiaoqian">
+            <span> <a class="bangzhu" href="https://passport.baidu.com/v2/?ucenterfeedback#reg "
+                    target="_blank">帮助中心</a></span>
+            <span class="shuxian">
+
+            </span>
+            <span class="kefu">
+                <a
+                    href="https://zhiqiu.baidu.com/imcswebchat/pc/index.html?id=48721&token=1nnbs7op4ocsr68143oamrjq9c4eoin2&domainID=pass&type=2">
+                    <img class="kefu-img" src="../image/kefu.png" alt=""></a>
+            </span>
+        </div>
+        <div class="denglu">
+            <div class="dl">
+                <h3>欢迎注册</h3>
+                <p>已有账号？
+                    <span id="denglu2"><a href="" style="text-decoration: none;">登录</a></span>
+                </p>
+
+                <div class="user">
+
+                    <label for="text" class="label-username">用户名</label>
+                    <input type="text" onchange="userNameValid()" name="username" placeholder="请设置用户名"
+                        class="input-username" autocomplete="off">
+                </div>
+                <div class="user">
+                    <label for="text" class="label-username">手机号</label>
+                    <input type="text" onchange="phoneNumberValid()" id="phoneNumber" placeholder="可用于登录和找回密码"
+                        class="input-username" autocomplete="off">
+                </div>
+                <div class="user">
+                    <label for="text" class="label-username">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+                    <input type="text" onchange="passwordVaild()" id="password" name="number" placeholder="请设置登录密码"
+                        class="input-username" autocomplete="off">
+                </div>
+                <div class="user">
+                    <label for="text" class="label-username">验证码</label>
+                    <input type="text" name="number" placeholder="请输入验证码" class="input-username" style="width: 184px;"
+                        autocomplete="off">
+                    <span id="suijishu" style="display: none;"></span>
+                    <button id="code" onclick="hidediv()">获取验证码 </button>
+
+
+                </div>
+                <div class="user">
+                    <input type="submit" class="zhuce-button" value="注册" id="" onclick="zhuce()">
+                    <!-- <button class="zhuce-button"><span>注册</span></button> -->
+                </div>
+            </div>
+
+        </div>
+        <div class="yiyouzhanghao">
+            <div class="box1">
+                <p>用户名密码登录</p>
+            </div>
+            <div class="box2">
+                <input type="text2" id="input1" placeholder="手机号/用户名/邮箱">
+            </div>
+            <div class="box2">
+                <input type="text2" id="input2" placeholder="密码">
+            </div>
+
+        </div>
+
+        <script>
+            function zhuce() {
+                console.log("chenggong")
+            }
+            function userNameValid() {//校验用户名，只能由数字和字母组成
+                var username = document.getElementsByName("username")[0].value
+                console.log(username)
+                for (var i = 0; i < username.length; i++) {
+                    var ch = username.charAt(i)
+                    if ((ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9')) {
+
+                    } else {
+                        alert("格式错误")
+                        break
+                    }
+                }
+            }
+            function phoneNumberValid() {//校验手机号，只能由数字组成，且第一位必须是1
+                var phoneNumber = document.getElementById("phoneNumber").value
+                console.log(phoneNumber)
+
+                if (phoneNumber.length != 11 || phoneNumber.charAt(0) != '1') {
+                    alert("格式错误")
+                    return
+                }
+                for (var x = 0; x < phoneNumber.length; x++) {
+                    console.log(phoneNumber);
+                    var ch = phoneNumber.charAt(x)
+                    if (ch >= '0' && ch <= '9') {
+
+                    } else {
+                        alert("格式错误")
+                        break
+                    }
+                }
+
+
+            }
+            function passwordVaild() {//校验密码，长度要超过六位数
+                var password = document.getElementById("password").value
+                console.log(password);
+                for (var i = 0; i < password.length; i++) {
+                    console.log(password);
+                    var ch = password.charAt(i)
+                    if (password.length > 6 && ch >= '0' && ch <= '9') {
+
+                    } else {
+                        alert("格式错误")
+                        break
+                    }
+                }
+
+            }
+            function hidediv() {//点击验证码,验证码按钮变成一个数字
+                var code = document.getElementById('code');
+                code.style.display = 'none'
+                var suijishu = document.getElementById('suijishu');
+                suijishu.style.display = 'inline'
+                suijishu.textContent = getSuiJiShu(4)
+            }
+            function getSuiJiShu(n) {
+                var code = ""
+                for (var x = 0; x < n; x++) {
+                    code += Math.floor(Math.random() * 10)
+                }
+                return code
+            }
+
+
+
+
+        </script>
+
+
+</body>
+
+</html>
